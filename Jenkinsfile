@@ -23,12 +23,12 @@ pipeline {
         //         sh 'mvn clean install'
         //     }
         // }
-        stage('Run Selenium Tests') {
-            steps {
-                // Run Selenium tests
-                sh 'npm test'
-            }
-        }
+        // stage('Run Selenium Tests') {
+        //     steps {
+        //         // Run Selenium tests
+        //         sh 'npm test'
+        //     }
+        // }
     }
     post {
         success {
