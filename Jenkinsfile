@@ -25,7 +25,7 @@ pipeline {
         stage('Run Selenium Tests') {
             steps {
                 // Run Selenium tests (adjust the command based on your test setup)
-                sh 'mvn test -Dtest=YourSeleniumTestClass'
+                sh 'npm test'
             }
         }
     }
