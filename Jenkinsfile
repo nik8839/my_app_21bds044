@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs 'NodeJS' // Ensure this matches the NodeJS installation name
-        maven 'Maven'   // Add Maven if it's installed, replace 'Maven' with the actual name
+        //maven 'Maven'   // Add Maven if it's installed, replace 'Maven' with the actual name
     }
     stages {
         stage('Checkout') {
@@ -17,12 +17,12 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Build with Maven') {
-            steps {
-                // Build the application using Maven
-                sh 'mvn clean install'
-            }
-        }
+        // stage('Build with Maven') {
+        //     steps {
+        //         // Build the application using Maven
+        //         sh 'mvn clean install'
+        //     }
+        // }
         stage('Run Selenium Tests') {
             steps {
                 // Run Selenium tests
@@ -32,7 +32,7 @@ pipeline {
     }
     post {
         success {
-            echo 'Build and tests were successful!'
+            echo test were successful!'
         }
         failure {
             echo 'Build or tests failed!'
