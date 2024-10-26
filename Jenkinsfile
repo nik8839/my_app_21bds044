@@ -1,7 +1,8 @@
 pipeline {
     agent any
     tools {
-        nodejs 'NodeJS' // Name of your NodeJS installation in Jenkins
+        nodejs 'NodeJS' // Ensure this matches the NodeJS installation name
+        maven 'Maven'   // Add Maven if it's installed, replace 'Maven' with the actual name
     }
     stages {
         stage('Checkout') {
@@ -24,7 +25,7 @@ pipeline {
         }
         stage('Run Selenium Tests') {
             steps {
-                // Run Selenium tests (adjust the command based on your test setup)
+                // Run Selenium tests
                 sh 'npm test'
             }
         }
