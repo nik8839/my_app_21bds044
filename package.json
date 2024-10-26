@@ -4,11 +4,10 @@
   "description": "",
   "main": "app.js",
   "type":"module",
-  "scripts": {
-    "test": "mocha --loader esm"
-    
-
-  },
+"scripts": {
+  "test": "mocha --require esm"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
