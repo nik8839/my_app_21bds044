@@ -19,7 +19,7 @@ pipeline {
         stage('Build with Maven') {
             steps {
                 // Build the application using Maven
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
         }
         stage('Run Selenium Tests') {
